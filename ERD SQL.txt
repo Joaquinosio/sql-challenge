@@ -1,0 +1,42 @@
+data_departments
+-
+dept_no PK string
+dept_name string 
+
+
+data_dept_empt
+-
+emp_no int FK - data_employees.emp_no
+dept_no string FK - data_departments.dept_no
+from_date DATE
+to_date DATE
+
+data_dept_manager 
+-
+dept_no string FK - data_departments.dept_no
+emp_no int FK - data_employees.emp_no
+from_date DATE
+to_date DATE
+
+data_employees
+-
+emp_no int PK 
+bith_date DATE
+first_name string
+last_name string
+gender string
+hire_date DATE
+ 
+data_salaries
+-
+emp_no int FK - data_employees.emp_no
+salary int
+from_date DATE
+to_date DATE
+
+data_titles
+-
+emp_no int FK - data_employees.emp_no
+title string
+from_date DATE
+to_date DATE
